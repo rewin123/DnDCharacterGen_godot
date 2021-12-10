@@ -278,8 +278,14 @@
 			"event_id": "dialogic_013"
 		},
 		{
-			"change_scene": "",
-			"event_id": "dialogic_041"
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "go_to_overview",
+				"target_node_path": "Control"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {
