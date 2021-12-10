@@ -5,7 +5,7 @@
 			"set_theme": "theme-1639062695.cfg"
 		},
 		{
-			"background": "res://scenes/Xnz39E5XTO4.jpg",
+			"background": "res://48317252161_68b12b86be_b.jpg",
 			"event_id": "dialogic_021",
 			"fade_duration": 0
 		},
@@ -276,6 +276,10 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"change_scene": "",
+			"event_id": "dialogic_041"
 		}
 	],
 	"metadata": {
