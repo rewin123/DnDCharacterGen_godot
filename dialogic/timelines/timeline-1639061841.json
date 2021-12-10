@@ -5,8 +5,9 @@
 			"set_theme": "theme-1639062695.cfg"
 		},
 		{
-			"background": "res://image1-3.jpeg",
-			"event_id": "dialogic_021"
+			"background": "res://scenes/Xnz39E5XTO4.jpg",
+			"event_id": "dialogic_021",
+			"fade_duration": 0
 		},
 		{
 			"character": "",
@@ -86,7 +87,7 @@
 			"value": ""
 		},
 		{
-			"definition": "",
+			"definition": "1639064510-787",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -248,7 +249,7 @@
 			"value": ""
 		},
 		{
-			"definition": "",
+			"definition": "1639064510-787",
 			"event_id": "dialogic_014",
 			"operation": "=",
 			"random_upper_limit": 100,
@@ -275,12 +276,6 @@
 		},
 		{
 			"event_id": "dialogic_013"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Вы [BaseClassName]"
 		}
 	],
 	"metadata": {

@@ -8,7 +8,7 @@ func _ready():
 	name = 'Background'
 	anchor_right = 1
 	anchor_bottom = 1
-	stretch_mode = TextureRect.STRETCH_SCALE
+	stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	show_behind_parent = true
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 

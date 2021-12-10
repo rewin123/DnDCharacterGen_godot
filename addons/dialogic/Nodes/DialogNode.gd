@@ -616,10 +616,11 @@ func _insert_glossary_definitions(text: String):
 # checks if NextIndicator and ChoiceButtons should be visible
 func _process(delta):
 	$TextBubble/NextIndicatorContainer/NextIndicator.visible = finished
-	if button_container.get_child_count() > 0:
-		$TextBubble/NextIndicatorContainer/NextIndicator.visible = false # Hide if question 
-		if waiting_for_answer and Input.is_action_just_released(input_next):
-			button_container.get_child(0).grab_focus()
+	if is_instance_valid(button_container):
+		if button_container.get_child_count() > 0:
+			$TextBubble/NextIndicatorContainer/NextIndicator.visible = false # Hide if question 
+			if waiting_for_answer and Input.is_action_just_released(input_next):
+				button_container.get_child(0).grab_focus()
 	
 	# Hide if no input is required
 	if current_event.has('text'):

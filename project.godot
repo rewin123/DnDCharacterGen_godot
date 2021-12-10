@@ -60,6 +60,12 @@ config/name="DnDCharatcerGen"
 run/main_scene="res://scenes/SelectClass.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=306
+window/dpi/allow_hidpi=true
+window/handheld/orientation="portrait"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
