@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://multiline_button.gd" type="Script" id=1]
+[ext_resource path="res://choise_font.tres" type="DynamicFont" id=2]
+
+[node name="PanelContainer" type="PanelContainer"]
+self_modulate = Color( 0.101961, 0.101961, 0.101961, 0.929412 )
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 15.0
+margin_bottom = 2276.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "sdawsdwasdwadddddddddddwddddddddddddddddddddddddddddddddddddd
+"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
