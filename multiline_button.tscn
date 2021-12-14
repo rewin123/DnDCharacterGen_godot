@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://multiline_button.gd" type="Script" id=1]
-[ext_resource path="res://choise_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GothicFont.tres" type="DynamicFont" id=2]
 
 [node name="PanelContainer" type="PanelContainer"]
-self_modulate = Color( 0.101961, 0.101961, 0.101961, 0.929412 )
+self_modulate = Color( 1, 0.992157, 0.658824, 0.929412 )
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -17,7 +17,7 @@ __meta__ = {
 margin_left = 14.0
 margin_top = 14.0
 margin_right = 15.0
-margin_bottom = 2276.0
+margin_bottom = 2952.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 2 )
