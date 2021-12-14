@@ -74,6 +74,7 @@ var dnd_class = ""
 
 func common_setup(name):
 	dnd_class = name
+	$MarginContainer/VBoxContainer/HBoxContainer/ClassImgPanel/ClassImg.texture = load("res://glossary_book/classes/" + name + ".png")
 	if name == "barbarian":
 		setup_barbarian()
 	if name == "warrior":
