@@ -42,12 +42,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Варвар"
+			"emit_signal": "barbarian",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Выверенному стилю боя, построенному на стиле боя",
@@ -57,12 +53,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Воин"
+			"emit_signal": "warrior",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Глубокому пониманию своей внутренней энергии и духовному развитию",
@@ -72,12 +64,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Монах"
+			"emit_signal": "monk",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Пониманию и единению с природой и природной энергией",
@@ -87,12 +75,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Друид"
+			"emit_signal": "druid",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -121,12 +105,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Жрец"
+			"emit_signal": "cleric",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Проявлению магического искуства",
@@ -152,12 +132,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Волшебник"
+			"emit_signal": "wizard",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "От темной сущности, что даровала мне силы",
@@ -167,12 +143,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Колдун"
+			"emit_signal": "warlock",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "От природных сил разлитых вокруг",
@@ -182,12 +154,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Чародей"
+			"emit_signal": "sourcer",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Глубоких знаний, полученных в магической консерватории",
@@ -197,12 +165,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Бард"
+			"emit_signal": "bard",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -215,12 +179,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Воин"
+			"emit_signal": "ranger",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -249,12 +209,8 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Плут"
+			"emit_signal": "rouge",
+			"event_id": "dialogic_040"
 		},
 		{
 			"choice": "Мой персонаж предпочитает сохранять справедливость в мире",
@@ -264,28 +220,14 @@
 			"value": ""
 		},
 		{
-			"definition": "1639064510-787",
-			"event_id": "dialogic_014",
-			"operation": "=",
-			"random_upper_limit": 100,
-			"set_random": false,
-			"set_value": "Рейнджер"
+			"emit_signal": "ranger",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"
-		},
-		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "go_to_overview",
-				"target_node_path": "Control"
-			},
-			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {
