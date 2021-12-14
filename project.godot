@@ -80,7 +80,7 @@ singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
 [gui]
 
 theme/use_hidpi=true
-theme/custom_font="res://base_font.tres"
+theme/custom_font="res://GothicFont.tres"
 
 [locale]
 

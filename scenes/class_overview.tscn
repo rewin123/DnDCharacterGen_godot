@@ -3,6 +3,7 @@
 [ext_resource path="res://glossary_book/classes/barbarian.png" type="Texture" id=1]
 
 [node name="ClassOverviewPanel" type="PanelContainer"]
+self_modulate = Color( 1, 0.92549, 0.560784, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
@@ -26,7 +27,7 @@ margin_bottom = 772.0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 372.0
-margin_bottom = 19.0
+margin_bottom = 40.0
 text = "Вы Варвар"
 align = 1
 
@@ -34,9 +35,9 @@ align = 1
 modulate = Color( 1, 0.984314, 0.984314, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 122.0
-margin_top = 27.0
+margin_top = 48.0
 margin_right = 250.0
-margin_bottom = 155.0
+margin_bottom = 176.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
@@ -54,9 +55,10 @@ expand = true
 stretch_mode = 6
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 163.0
+self_modulate = Color( 1, 0.984314, 0.709804, 1 )
+margin_top = 184.0
 margin_right = 372.0
-margin_bottom = 733.0
+margin_bottom = 712.0
 size_flags_horizontal = 5
 size_flags_vertical = 3
 
@@ -64,13 +66,13 @@ size_flags_vertical = 3
 margin_left = 14.0
 margin_top = 14.0
 margin_right = 358.0
-margin_bottom = 556.0
+margin_bottom = 514.0
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="Description" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/ScrollContainer"]
 margin_right = 320.0
-margin_bottom = 844.0
+margin_bottom = 2524.0
 size_flags_horizontal = 3
 text = "Высокий, закутанный в шкуры дикарь пробирается сквозь метель, сжимая в руке свой топор. Он со смехом бросается на морозного великана, который посмел убить лося в стаде его народа.
 Полуорк рычит на храбреца, осмелившегося посягнуть на его первенство в племени, готовый свернуть ему шею голыми руками, как он поступил с предыдущими шестью соперниками.
@@ -81,7 +83,7 @@ text = "Высокий, закутанный в шкуры дикарь проб
 autowrap = true
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 741.0
+margin_top = 720.0
 margin_right = 372.0
 margin_bottom = 772.0
 text = "Далее"
