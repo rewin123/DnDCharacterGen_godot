@@ -52,7 +52,7 @@ public static class DialogicSharp
     return Start<Node>(timeline, DEFAULT_DIALOG_RESOURCE, resetSaves, debugMode, useCanvasInstead);
   }
 
-  public static T Start<T>(String timeline, String dialogScenePath, bool resetSaves = true, bool debugMode = false) where T : class
+  public static T Start<T>(String timeline, String dialogScenePath, bool resetSaves = true, bool debugMode = false, bool useCanvasInstead = false) where T : class
   {
     return (T)_dialogic.Call("start", timeline, resetSaves, dialogScenePath, debugMode);
   }

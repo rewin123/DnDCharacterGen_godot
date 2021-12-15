@@ -1,0 +1,8 @@
+D:\Projects\DnDCharacterGen_godot\.mono\temp\bin\ExportDebug\DnDCharatcerGen.dll
+D:\Projects\DnDCharacterGen_godot\.mono\temp\bin\ExportDebug\DnDCharatcerGen.pdb
+D:\Projects\DnDCharacterGen_godot\.mono\temp\obj\ExportDebug\DnDCharatcerGen.csprojAssemblyReference.cache
+D:\Projects\DnDCharacterGen_godot\.mono\temp\obj\ExportDebug\DnDCharatcerGen.AssemblyInfoInputs.cache
+D:\Projects\DnDCharacterGen_godot\.mono\temp\obj\ExportDebug\DnDCharatcerGen.AssemblyInfo.cs
+D:\Projects\DnDCharacterGen_godot\.mono\temp\obj\ExportDebug\DnDCharatcerGen.csproj.CoreCompileInputs.cache
+D:\Projects\DnDCharacterGen_godot\.mono\temp\obj\ExportDebug\DnDCharatcerGen.dll
+D:\Projects\DnDCharacterGen_godot\.mono\temp\obj\ExportDebug\DnDCharatcerGen.pdb

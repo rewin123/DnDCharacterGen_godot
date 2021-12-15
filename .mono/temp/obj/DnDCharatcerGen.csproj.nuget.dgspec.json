@@ -1,0 +1,48 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\DnDCharacterGen_godot\\DnDCharatcerGen.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\DnDCharacterGen_godot\\DnDCharatcerGen.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\DnDCharacterGen_godot\\DnDCharatcerGen.csproj",
+        "projectName": "DnDCharatcerGen",
+        "projectPath": "D:\\Projects\\DnDCharacterGen_godot\\DnDCharatcerGen.csproj",
+        "packagesPath": "C:\\Users\\rewin\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\DnDCharacterGen_godot\\.mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rewin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

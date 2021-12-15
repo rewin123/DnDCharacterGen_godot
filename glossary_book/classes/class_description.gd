@@ -72,6 +72,8 @@ func setup_wizard():
 	
 var dnd_class = ""
 
+signal next_scene
+
 func common_setup(name):
 	dnd_class = name
 	$MarginContainer/VBoxContainer/HBoxContainer/ClassImgPanel/ClassImg.texture = load("res://glossary_book/classes/" + name + ".png")
@@ -107,3 +109,7 @@ func common_setup(name):
 
 func _ready():
 	pass
+
+
+func _on_Button_pressed():
+	emit_signal("next_scene", dnd_class) # Replace with function body.

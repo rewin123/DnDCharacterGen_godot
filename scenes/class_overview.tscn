@@ -94,3 +94,5 @@ margin_top = 720.0
 margin_right = 372.0
 margin_bottom = 772.0
 text = "Далее"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
