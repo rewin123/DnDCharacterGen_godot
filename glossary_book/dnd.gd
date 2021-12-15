@@ -7,6 +7,20 @@ class_name dnd
 
 enum Ability {strength, dexterity, constitution, intelegence, wisdom, charisma}
 
+enum Class {
+	barbarian,
+	bard,
+	cleric,
+	druid,
+	fighter,
+	monk,
+	paladin,
+	ranger,
+	rogue,
+	sorcerer,
+	warlock,
+	wizard
+}
 
 enum Race {
 	mountain_dwarf,
