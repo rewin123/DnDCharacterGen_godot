@@ -53,7 +53,7 @@
 			"value": ""
 		},
 		{
-			"emit_signal": "warrior",
+			"emit_signal": "fighter",
 			"event_id": "dialogic_040"
 		},
 		{
