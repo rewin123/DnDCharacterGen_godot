@@ -95,3 +95,4 @@ func set_roll_row(row_idx):
 func _on_Button_pressed():
 	if state == INITED:
 		state = ROLLING
+		$VBoxContainer/Button.disabled = true

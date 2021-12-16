@@ -20,16 +20,16 @@ margin_bottom = 786.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 372.0
-margin_bottom = 86.0
+margin_bottom = 80.0
 size_flags_horizontal = 7
 text = "Опеределение параметров бросками кубиков"
 align = 1
 autowrap = true
 
 [node name="RollTable" type="GridContainer" parent="VBoxContainer"]
-margin_top = 94.0
+margin_top = 88.0
 margin_right = 372.0
-margin_bottom = 712.0
+margin_bottom = 715.0
 size_flags_horizontal = 7
 size_flags_vertical = 7
 custom_constants/vseparation = 0
@@ -37,7 +37,7 @@ custom_constants/hseparation = 0
 columns = 6
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-margin_top = 720.0
+margin_top = 723.0
 margin_right = 372.0
 margin_bottom = 772.0
 text = "Начать броски кубиков"
