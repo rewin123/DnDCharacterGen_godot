@@ -141,6 +141,17 @@ func setup():
 	buf_races[dnd.Race.forest_gnome][dnd.Ability.dexterity] = 1
 	buf_races[dnd.Race.rock_gnome][dnd.Ability.constitution] = 1
 	
+	#halfelf
+	buf_races[dnd.Race.halfelf][dnd.Ability.charisma] = 2
+	
+	#halforc
+	buf_races[dnd.Race.halforc][dnd.Ability.strength] = 2
+	buf_races[dnd.Race.halforc][dnd.Ability.constitution] = 1
+	
+	#tiefling
+	buf_races[dnd.Race.tiefling][dnd.Ability.charisma] = 2
+	buf_races[dnd.Race.tiefling][dnd.Ability.intelegence] = 1
+	
 	
 	
 	
