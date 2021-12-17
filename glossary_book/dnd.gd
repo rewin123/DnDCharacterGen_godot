@@ -25,11 +25,15 @@ enum Class {
 enum Race {
 	mountain_dwarf,
 	hill_dwarf,
-	elf,
-	halfling,
+	high_elf,
+	forest_elf,
+	dark_elf,
+	lightfoot_halfling,
+	stout_halfling,
 	human,
 	dragonborn,
-	gnome,
+	forest_gnome,
+	rock_gnome,
 	halfelf,
 	halforc,
 	tiefling}
