@@ -24,25 +24,26 @@ size_flags_horizontal = 7
 alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 4.0
 margin_right = 371.0
-margin_bottom = 40.0
+margin_bottom = 41.0
 size_flags_horizontal = 7
 text = "Гном"
 align = 1
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
-margin_top = 48.0
+margin_top = 49.0
 margin_right = 371.0
-margin_bottom = 48.0
+margin_bottom = 49.0
 size_flags_horizontal = 7
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
-margin_top = 56.0
+margin_top = 57.0
 margin_right = 371.0
-margin_bottom = 96.0
+margin_bottom = 94.0
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 104.0
+margin_top = 102.0
 margin_right = 371.0
-margin_bottom = 156.0
+margin_bottom = 151.0
 text = "Выбрать"

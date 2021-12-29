@@ -33,15 +33,15 @@ margin_right = 372.0
 margin_bottom = 200.0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_top = 80.0
-margin_right = 147.0
-margin_bottom = 120.0
+margin_top = 81.0
+margin_right = 135.0
+margin_bottom = 118.0
 text = "Вы Варвар"
 align = 1
 
 [node name="ClassImgPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 163.0
-margin_right = 363.0
+margin_left = 157.0
+margin_right = 357.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 200, 200 )
 size_flags_horizontal = 6
@@ -79,7 +79,7 @@ scroll_horizontal_enabled = false
 
 [node name="Description" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/ScrollContainer"]
 margin_right = 320.0
-margin_bottom = 2524.0
+margin_bottom = 2101.0
 size_flags_horizontal = 3
 text = "Высокий, закутанный в шкуры дикарь пробирается сквозь метель, сжимая в руке свой топор. Он со смехом бросается на морозного великана, который посмел убить лося в стаде его народа.
 Полуорк рычит на храбреца, осмелившегося посягнуть на его первенство в племени, готовый свернуть ему шею голыми руками, как он поступил с предыдущими шестью соперниками.

@@ -56,6 +56,21 @@ static func get_zero_abilities():
 static func roll_dice(d):
 	return 1 + randi() % d
 
+static func get_class_ability_order():
+	var res = {}
+	res[Class.barbarian] = [Ability.strength, Ability.constitution, Ability.dexterity, Ability.intelegence, Ability.wisdom, Ability.charisma]
+	res[Class.bard] = [Ability.charisma, Ability.dexterity, Ability.constitution, Ability.intelegence, Ability.wisdom, Ability.strength]
+	res[Class.cleric] = [Ability.wisdom, Ability.constitution, Ability.strength, Ability.dexterity, Ability.intelegence, Ability.charisma]
+	res[Class.druid] = [Ability.wisdom, Ability.constitution, Ability.strength, Ability.dexterity, Ability.intelegence, Ability.charisma]
+	res[Class.fighter] = [Ability.strength, Ability.constitution, Ability.dexterity, Ability.intelegence, Ability.wisdom, Ability.charisma]
+	res[Class.monk] = [Ability.dexterity, Ability.constitution, Ability.strength, Ability.intelegence, Ability.wisdom, Ability.charisma]
+	res[Class.paladin] = [Ability.strength, Ability.charisma, Ability.constitution, Ability.dexterity, Ability.intelegence, Ability.wisdom]
+	res[Class.ranger] = [Ability.dexterity, Ability.wisdom, Ability.constitution, Ability.strength, Ability.intelegence, Ability.charisma]
+	res[Class.rogue] = [Ability.dexterity, Ability.strength, Ability.constitution, Ability.intelegence, Ability.wisdom, Ability.charisma]
+	res[Class.sorcerer] = [Ability.charisma, Ability.constitution, Ability.dexterity, Ability.strength, Ability.intelegence, Ability.wisdom]
+	res[Class.warlock] = [Ability.charisma, Ability.constitution, Ability.dexterity, Ability.strength, Ability.intelegence, Ability.wisdom]
+	res[Class.wizard] = [Ability.intelegence, Ability.constitution, Ability.dexterity, Ability.strength, Ability.wisdom, Ability.charisma]
+	return res
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
