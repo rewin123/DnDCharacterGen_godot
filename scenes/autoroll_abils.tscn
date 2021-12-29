@@ -12,13 +12,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = 14.0
 margin_top = 14.0
 margin_right = 386.0
 margin_bottom = 786.0
+scroll_horizontal_enabled = false
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 372.0
+margin_bottom = 772.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
 margin_right = 372.0
 margin_bottom = 80.0
 size_flags_horizontal = 7
@@ -26,7 +33,7 @@ text = "Опеределение параметров бросками куби�
 align = 1
 autowrap = true
 
-[node name="RollTable" type="GridContainer" parent="VBoxContainer"]
+[node name="RollTable" type="GridContainer" parent="ScrollContainer/VBoxContainer"]
 margin_top = 88.0
 margin_right = 372.0
 margin_bottom = 715.0
@@ -36,10 +43,10 @@ custom_constants/vseparation = 0
 custom_constants/hseparation = 0
 columns = 6
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer"]
 margin_top = 723.0
 margin_right = 372.0
 margin_bottom = 772.0
 text = "Начать броски кубиков"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

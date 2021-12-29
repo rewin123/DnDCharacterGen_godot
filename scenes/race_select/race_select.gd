@@ -7,9 +7,19 @@ extends Node
 
 var instance_race_plate = load("res://scenes/race_select/race_plate.tscn")
 
+signal next_scene
+
 var instance_race_book = preload("res://glossary_book/races/race_book.gd")
 var race_book = instance_race_book.new()
 var person = null
+
+var autoroll_instance = load("res://scenes/autoroll_abils.tscn")
+
+func race_selected(race_base):
+	person.person_base['race'] = race_base
+	var next = autoroll_instance.instance()
+	emit_signal("next_scene", next, person)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -38,9 +48,12 @@ func race_placing(person_):
 		
 		if cost > 0:
 			var plate = instance_race_plate.instance()
+			plate.race_base = race
 			plate.get_node("MarginContainer/VBoxContainer/Label").text = race_book.name_races[race] + " +" + str(cost)
 			plate.get_node("MarginContainer/VBoxContainer/Label2").text = race_book.text_races[race]
 			plate.get_node("MarginContainer/VBoxContainer/PanelContainer/TextureRect").texture = load(race_book.img_races[race])
+			
+			plate.connect("clicked_race", self, "race_selected")
 			
 			plates_order.append([plate, cost])
 			

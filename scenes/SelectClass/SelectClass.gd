@@ -13,13 +13,23 @@ onready var person = person_instance.new()
 
 var current_node = null
 
+func _simple_next_scene(next_scene, person):
+	current_node.queue_free()
+	current_node = next_scene
+	current_node.set_person(person)
+	current_node.connect("next_scene", self, "_simple_next_scene")
+	add_child(current_node)
+	
+	
 func _go_to_race_select(dnd_class):
 	person.person_base["class"] = dnd_class
 	print("class ", dnd_class)
 	current_node.queue_free()
 	current_node = race_select_scene.instance()
+	current_node.connect("next_scene", self, "_simple_next_scene")
 	add_child(current_node)
 	current_node.race_placing(person)
+	
 
 func _on_dialogic_event(val):
 	print("Class ", val)

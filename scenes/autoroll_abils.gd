@@ -8,6 +8,7 @@ extends PanelContainer
 var grid_items = {}
 
 var rolls = {}
+var dice_result = []
 			
 var roll_idx = 0
 var dice_idx = 0
@@ -16,12 +17,28 @@ var last_time_event = 0
 var current_time = 0
 
 var dice_dt = 0.01
-var dice_max_dt = 0.3
+var dice_max_dt = 0.02
 var current_dice_dt = dice_dt
 
-enum {INITED, ROLLING, STABLE}
+enum {INITED, ROLLING, STABLE, APPLYING}
 
 var state = INITED
+
+var person = null
+
+var race_book_instance = preload("res://glossary_book/races/race_book.gd")
+var race_book = race_book_instance.new()
+
+func set_person(person_):
+	person = person_
+	
+func add_panel(node, text):
+	var panel = PanelContainer.new()
+	var label = Label.new()
+	label.set_text(text)
+	panel.add_child(label)
+	node.add_child(panel)
+	return label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,7 +49,7 @@ func _ready():
 		var roll_number = Label.new()
 		roll_number.set_text("Roll #" + String(row + 1))
 		panel.add_child(roll_number)
-		$VBoxContainer/RollTable.add_child(panel)
+		$ScrollContainer/VBoxContainer/RollTable.add_child(panel)
 		
 		grid_items[row] = {}
 		
@@ -41,15 +58,52 @@ func _ready():
 			var dice_label = Label.new()
 			dice_label.set_text(String(0))
 			panel.add_child(dice_label)
-			$VBoxContainer/RollTable.add_child(panel)
+			$ScrollContainer/VBoxContainer/RollTable.add_child(panel)
 			grid_items[row][columns] = dice_label
 			
 		panel = PanelContainer.new()
 		var result = Label.new()
 		result.set_text("0")
 		panel.add_child(result)
-		$VBoxContainer/RollTable.add_child(panel)
+		$ScrollContainer/VBoxContainer/RollTable.add_child(panel)
 		grid_items[row][4] = result
+		
+func set_stable():
+	state = STABLE
+	$ScrollContainer/VBoxContainer/Button.disabled = false
+	$ScrollContainer/VBoxContainer/Button.text = "Далее"
+	
+	
+func set_applying():
+	state = APPLYING
+	dice_result.sort()
+	for ch in $ScrollContainer/VBoxContainer/RollTable.get_children():
+		$ScrollContainer/VBoxContainer/RollTable.remove_child(ch)
+		ch.queue_free()
+	$ScrollContainer/VBoxContainer/RollTable.columns = 2
+	
+	var cls = person.person_base["class"]
+	var class_order = dnd.get_class_ability_order()
+	var my_order = class_order[cls]
+	
+	for i in range(0,6):
+		
+		var buf = race_book.buf_races[cls][my_order[i]]
+		
+		add_panel($ScrollContainer/VBoxContainer/RollTable, "Хар.")
+		add_panel($ScrollContainer/VBoxContainer/RollTable, str(my_order[i]))
+		
+		add_panel($ScrollContainer/VBoxContainer/RollTable, "Бонус расы")
+		add_panel($ScrollContainer/VBoxContainer/RollTable, "+" + str(buf))
+		
+		add_panel($ScrollContainer/VBoxContainer/RollTable, "Бросок")
+		add_panel($ScrollContainer/VBoxContainer/RollTable, str(dice_result[-i-1]))
+		
+		add_panel($ScrollContainer/VBoxContainer/RollTable, "Результат")
+		add_panel($ScrollContainer/VBoxContainer/RollTable, str(dice_result[-i-1] + buf))
+		
+		person.person_base[my_order[i]] = dice_result[-i-1] + buf
+	
 
 func _process(delta):
 	current_time += delta
@@ -69,7 +123,7 @@ func _process(delta):
 					roll_idx += 1
 					dice_idx = 0
 					if roll_idx >= 6:
-						state = STABLE
+						set_stable()
 		
 func set_roll_row(row_idx):
 	var min_roll = rolls[0]
@@ -87,6 +141,8 @@ func set_roll_row(row_idx):
 			sum += rolls[i]
 			
 	grid_items[row_idx][4].set_text(String(sum))
+	
+	dice_result.append(sum)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -95,4 +151,6 @@ func set_roll_row(row_idx):
 func _on_Button_pressed():
 	if state == INITED:
 		state = ROLLING
-		$VBoxContainer/Button.disabled = true
+		$ScrollContainer/VBoxContainer/Button.disabled = true
+	elif state == STABLE:
+		set_applying()
