@@ -6,6 +6,7 @@ class_name dnd
 # var b = "text"
 
 enum Ability {strength, dexterity, constitution, intelegence, wisdom, charisma}
+	
 
 enum Class {
 	barbarian,
@@ -42,6 +43,15 @@ enum Race {
 func _ready():
 	pass # Replace with function body.
 
+static func get_ability_names():
+	var res = {Ability.strength : "Сила",
+	Ability.dexterity : "Ловкость",
+	Ability.constitution : "Телосложение",
+	Ability.intelegence : "Интеллект",
+	Ability.wisdom : "Мудрость",
+	Ability.charisma : "Харизма",
+	}
+	return res
 
 static func get_zero_abilities():
 	var res = {}

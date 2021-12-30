@@ -82,16 +82,18 @@ func set_applying():
 		ch.queue_free()
 	$ScrollContainer/VBoxContainer/RollTable.columns = 2
 	
+	var race = person.person_base["race"]
 	var cls = person.person_base["class"]
 	var class_order = dnd.get_class_ability_order()
 	var my_order = class_order[cls]
+	var ability_names = dnd.get_ability_names()
 	
 	for i in range(0,6):
 		
-		var buf = race_book.buf_races[cls][my_order[i]]
+		var buf = race_book.buf_races[race][my_order[i]]
 		
 		add_panel($ScrollContainer/VBoxContainer/RollTable, "Хар.")
-		add_panel($ScrollContainer/VBoxContainer/RollTable, str(my_order[i]))
+		add_panel($ScrollContainer/VBoxContainer/RollTable, str(ability_names[my_order[i]]))
 		
 		add_panel($ScrollContainer/VBoxContainer/RollTable, "Бонус расы")
 		add_panel($ScrollContainer/VBoxContainer/RollTable, "+" + str(buf))

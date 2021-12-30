@@ -48,7 +48,7 @@ func race_placing(person_):
 		
 		if cost > 0:
 			var plate = instance_race_plate.instance()
-			plate.race_base = race
+			plate.race_base = race + 0
 			plate.get_node("MarginContainer/VBoxContainer/Label").text = race_book.name_races[race] + " +" + str(cost)
 			plate.get_node("MarginContainer/VBoxContainer/Label2").text = race_book.text_races[race]
 			plate.get_node("MarginContainer/VBoxContainer/PanelContainer/TextureRect").texture = load(race_book.img_races[race])
