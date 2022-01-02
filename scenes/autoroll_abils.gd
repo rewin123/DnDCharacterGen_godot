@@ -29,6 +29,10 @@ var person = null
 var race_book_instance = preload("res://glossary_book/races/race_book.gd")
 var race_book = race_book_instance.new()
 
+var next_scene_instance = load("res://scenes/roleplaying_person_page.tscn")
+
+signal next_scene
+
 func set_person(person_):
 	person = person_
 	
@@ -156,3 +160,5 @@ func _on_Button_pressed():
 		$ScrollContainer/VBoxContainer/Button.disabled = true
 	elif state == STABLE:
 		set_applying()
+	elif state == APPLYING:
+		emit_signal("next_scene", next_scene_instance.instance(), person)

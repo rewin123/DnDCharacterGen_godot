@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/person_page/dice_label.gd" type="Script" id=1]
+
+[node name="DiceLabel" type="MarginContainer"]
+anchor_right = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+margin_right = 380.0
+margin_bottom = 49.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HSplitContainer"]
+margin_top = 6.0
+margin_right = 116.0
+margin_bottom = 43.0
+text = "Ловкость"
+
+[node name="Button" type="Button" parent="HSplitContainer"]
+margin_left = 322.0
+margin_right = 380.0
+margin_bottom = 49.0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "+0"
+
+[connection signal="pressed" from="HSplitContainer/Button" to="." method="_on_Button_pressed"]

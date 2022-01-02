@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/flowup_message.gd" type="Script" id=1]
+
+[node name="MarginContainer" type="MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+self_modulate = Color( 0.870588, 0.654902, 0, 0.498039 )
+margin_right = 163.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PanelContainer"]
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 149.0
+margin_bottom = 51.0
+size_flags_horizontal = 5
+size_flags_vertical = 5
+text = "Sample text"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -66,7 +66,7 @@ func setup_rouge():
 	$MarginContainer/VBoxContainer/PanelContainer/ScrollContainer/Description.text = rouge_text
 	
 func setup_sourcer():
-	dnd_class = dnd.Class.sourcerer
+	dnd_class = dnd.Class.sorcerer
 	$MarginContainer/VBoxContainer/HBoxContainer/Label.text = "Вы - Чародей"
 	$MarginContainer/VBoxContainer/PanelContainer/ScrollContainer/Description.text = sourcer_text
 	
